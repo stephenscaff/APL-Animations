@@ -1,0 +1,37 @@
+{
+  "parameters": [
+    "duration",
+    "delay",
+    "easing",
+    "scaleStart",
+    "componentId"
+  ],
+  "commands": [
+      {
+      "type": "AnimateItem",
+      "componentId": "${componentId}",
+      "duration": "${duration || 200}",
+      "delay": "${delay || 0}",
+      "easing": "${easing || ease}",
+      "value": [
+        {
+          "property": "opacity",
+          "to": 1
+        },
+        {
+          "property": "transform",
+          "from": [
+            {
+              "scaleX": "${scaleStart || 0.1}"
+            }
+          ],
+          "to": [
+            {
+              "scale": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

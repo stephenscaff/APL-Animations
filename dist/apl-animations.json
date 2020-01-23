@@ -1,0 +1,405 @@
+{
+    "commands": {
+        "fadeIn": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInLeftRight": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "amount",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "${amount || 100}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInOut": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 400}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "0%": 0,
+                            "40%": 1,
+                            "60%": 1,
+                            "100%": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInScale": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "scaleStart",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scale": "${scaleStart || 0.1}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scale": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInScaleX": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "scaleStart",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": "${scaleStart || 0.1}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scale": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInScaleY": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "scaleStart",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleY": "${scaleStart || 0.1}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scale": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInUpDown": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "amount",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "componentId": "${componentId}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "${amount || 100}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOut": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "component"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOutLeftRight": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "amount",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "${amount || 100}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOutUpDown": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "amount",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "${amount || 100}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideInLeftRight": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "amount",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "${amount || 100%}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideInUpDown": {
+            "parameters": [
+                "duration",
+                "delay",
+                "easing",
+                "amount",
+                "componentId"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "componentId": "${componentId}",
+                    "duration": "${duration || 200}",
+                    "delay": "${delay || 0}",
+                    "easing": "${easing || ease}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "${amount || 100%}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

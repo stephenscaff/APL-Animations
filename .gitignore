@@ -1,0 +1,35 @@
+# Compiled output
+/tmp
+
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+
+# Optional npm cache directory
+.npm
+
+
+# dotenv environment variables file
+.env
+.env.test
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# misc
+.sass-cache
+connect.lock
+typings
+
+
+# System Files
+.DS_Store
+Thumbs.db

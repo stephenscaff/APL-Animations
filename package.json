@@ -1,0 +1,12 @@
+{
+  "name": "apl-animations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "build": "cd build && node build"
+},
+  "keywords": [],
+  "author": "Stephen Scaff",
+  "license": ""
+}

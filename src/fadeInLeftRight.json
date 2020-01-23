@@ -1,0 +1,37 @@
+{
+  "parameters": [
+    "duration",
+    "delay",
+    "easing",
+    "amount",
+    "componentId"
+  ],
+  "commands": [
+      {
+      "type": "AnimateItem",
+      "componentId": "${componentId}",
+      "duration": "${duration || 200}",
+      "delay": "${delay || 0}",
+      "easing": "${easing || ease}",
+      "value": [
+        {
+          "property": "opacity",
+          "to": 1
+        },
+        {
+          "property": "transform",
+          "from": [
+              {
+                "translateX": "${amount || 100}"
+              }
+          ],
+          "to": [
+            {
+              "translateY": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

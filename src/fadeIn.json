@@ -1,0 +1,24 @@
+{
+  "parameters": [
+    "duration",
+    "delay",
+    "easing",
+    "componentId"
+  ],
+  "commands": [
+      {
+      "type": "AnimateItem",
+      "componentId": "${componentId}",
+      "duration": "${duration || 200}",
+      "delay": "${delay || 0}",
+      "easing": "${easing || ease}",
+      "value": [
+        {
+          "property": "opacity",
+          "from": 0,
+          "to": 1
+        }
+      ]
+    }
+  ]
+}
